@@ -1,101 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-05-12T14:31:30.722207" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-05-12T15:49:58.295853" rpa="false" schemaversion="5">
 <suite id="s1" name="Organo" source="C:\Users\devAZ\QA\Robot\Organo">
 <suite id="s1-s1" name="Tests" source="C:\Users\devAZ\QA\Robot\Organo\tests">
-<suite id="s1-s1-s1" name="Primeito Teste" source="C:\Users\devAZ\QA\Robot\Organo\tests\primeito_teste.robot">
-<test id="s1-s1-s1-t1" name="Abrir o navegador e acessar o site do organo" line="7">
+<suite id="s1-s1-s1" name="Test1" source="C:\Users\devAZ\QA\Robot\Organo\tests\test1.robot">
+<test id="s1-s1-s1-t1" name="Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time esperado" line="20">
+<kw name="Dado que eu acesse o Organo">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:31.122887" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
-<arg>http://localhost:3000/</arg>
-<arg>Chrome</arg>
+<msg time="2025-05-12T15:49:58.703001" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-12T14:31:31.122887" elapsed="1.842164"/>
+<status status="PASS" start="2025-05-12T15:49:58.702002" elapsed="2.222968"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-12T14:31:32.965051" elapsed="0.022065"/>
+<status status="PASS" start="2025-05-12T15:49:58.701001" elapsed="2.224967"/>
 </kw>
-<status status="PASS" start="2025-05-12T14:31:31.120889" elapsed="1.867229"/>
-</test>
-<test id="s1-s1-s1-t2" name="Preencher os campos do formulário" line="11">
+<kw name="E preencha os campos do formulário">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:32.990116" level="INFO">Typing text 'Andre' into text field 'id:form-nome'.</msg>
-<arg>id:form-nome</arg>
-<arg>Andre</arg>
+<msg time="2025-05-12T15:50:00.926971" level="INFO">Typing text 'Akemi' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>Akemi</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T14:31:32.990116" elapsed="0.088729"/>
+<status status="PASS" start="2025-05-12T15:50:00.926971" elapsed="0.088201"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:33.079840" level="INFO">Typing text 'Dev' into text field 'id:form-cargo'.</msg>
-<arg>id:form-cargo</arg>
-<arg>Dev</arg>
+<msg time="2025-05-12T15:50:01.016165" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>Desenvolvedora</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T14:31:33.078845" elapsed="0.070257"/>
+<status status="PASS" start="2025-05-12T15:50:01.016165" elapsed="0.074825"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:33.150101" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
-<arg>id:form-imagem</arg>
+<msg time="2025-05-12T15:50:01.091987" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
 <arg>https://picsum.photos/200/300</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T14:31:33.150101" elapsed="0.086671"/>
+<status status="PASS" start="2025-05-12T15:50:01.091987" elapsed="0.086161"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:33.237781" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
-<arg>class:lista-suspensa</arg>
+<msg time="2025-05-12T15:50:01.179154" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T14:31:33.237781" elapsed="0.068618"/>
+<status status="PASS" start="2025-05-12T15:50:01.178148" elapsed="0.062123"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:33.307405" level="INFO">Clicking element '//option[contains(., 'Programação')]'.</msg>
-<arg>//option[contains(., 'Programação')]</arg>
+<msg time="2025-05-12T15:50:01.241271" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${PROGRAMACAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T14:31:33.307405" elapsed="0.030067"/>
+<status status="PASS" start="2025-05-12T15:50:01.241271" elapsed="0.030552"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-12T14:31:43.337675" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-12T14:31:33.337472" elapsed="10.000203"/>
+<status status="PASS" start="2025-05-12T15:50:00.925968" elapsed="0.346854"/>
 </kw>
+<kw name="E clique no botão criar card">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:43.338683" level="INFO">Clicking element 'id:form-botao'.</msg>
-<arg>id:form-botao</arg>
+<msg time="2025-05-12T15:50:01.273822" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${CAMPO_CARD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T14:31:43.338683" elapsed="0.058635"/>
+<status status="PASS" start="2025-05-12T15:50:01.272822" elapsed="0.056609"/>
 </kw>
+<status status="PASS" start="2025-05-12T15:50:01.272822" elapsed="0.057616"/>
+</kw>
+<kw name="Então identificar o card no time esperado">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-05-12T14:31:43.416355" level="INFO">Element 'class:colaborador' is displayed.</msg>
+<msg time="2025-05-12T15:50:01.348462" level="INFO">Element 'class:colaborador' is displayed.</msg>
 <arg>class:colaborador</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-12T14:31:43.397318" elapsed="0.019037"/>
+<status status="PASS" start="2025-05-12T15:50:01.330438" elapsed="0.018024"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-12T14:31:48.418484" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-12T14:31:43.417361" elapsed="5.001123"/>
+<status status="PASS" start="2025-05-12T15:50:01.330438" elapsed="0.019032"/>
 </kw>
-<status status="PASS" start="2025-05-12T14:31:32.989118" elapsed="15.429874"/>
+<status status="PASS" start="2025-05-12T15:49:58.699997" elapsed="2.649473"/>
 </test>
-<status status="PASS" start="2025-05-12T14:31:30.752265" elapsed="17.667733"/>
+<status status="PASS" start="2025-05-12T15:49:58.326899" elapsed="3.023580"/>
 </suite>
-<status status="PASS" start="2025-05-12T14:31:30.750268" elapsed="17.671732"/>
+<status status="PASS" start="2025-05-12T15:49:58.324896" elapsed="3.026578"/>
 </suite>
-<status status="PASS" start="2025-05-12T14:31:30.727727" elapsed="17.695270"/>
+<status status="PASS" start="2025-05-12T15:49:58.302371" elapsed="3.050106"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Organo" id="s1" pass="2" fail="0" skip="0">Organo</stat>
-<stat name="Tests" id="s1-s1" pass="2" fail="0" skip="0">Organo.Tests</stat>
-<stat name="Primeito Teste" id="s1-s1-s1" pass="2" fail="0" skip="0">Organo.Tests.Primeito Teste</stat>
+<stat name="Organo" id="s1" pass="1" fail="0" skip="0">Organo</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Organo.Tests</stat>
+<stat name="Test1" id="s1-s1-s1" pass="1" fail="0" skip="0">Organo.Tests.Test1</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-12T14:31:31.119889" level="WARN">Imported library 'webdriver_manager' contains no keywords.</msg>
 </errors>
 </robot>
