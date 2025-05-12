@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-05-12T14:31:30.722207" rpa="false" schemaversion="5">
+<suite id="s1" name="Organo" source="C:\Users\devAZ\QA\Robot\Organo">
+<suite id="s1-s1" name="Tests" source="C:\Users\devAZ\QA\Robot\Organo\tests">
+<suite id="s1-s1-s1" name="Primeito Teste" source="C:\Users\devAZ\QA\Robot\Organo\tests\primeito_teste.robot">
+<test id="s1-s1-s1-t1" name="Abrir o navegador e acessar o site do organo" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:31.122887" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>http://localhost:3000/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-12T14:31:31.122887" elapsed="1.842164"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-12T14:31:32.965051" elapsed="0.022065"/>
+</kw>
+<status status="PASS" start="2025-05-12T14:31:31.120889" elapsed="1.867229"/>
+</test>
+<test id="s1-s1-s1-t2" name="Preencher os campos do formulário" line="11">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:32.990116" level="INFO">Typing text 'Andre' into text field 'id:form-nome'.</msg>
+<arg>id:form-nome</arg>
+<arg>Andre</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-12T14:31:32.990116" elapsed="0.088729"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:33.079840" level="INFO">Typing text 'Dev' into text field 'id:form-cargo'.</msg>
+<arg>id:form-cargo</arg>
+<arg>Dev</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-12T14:31:33.078845" elapsed="0.070257"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:33.150101" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
+<arg>id:form-imagem</arg>
+<arg>https://picsum.photos/200/300</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-12T14:31:33.150101" elapsed="0.086671"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:33.237781" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>class:lista-suspensa</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-12T14:31:33.237781" elapsed="0.068618"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:33.307405" level="INFO">Clicking element '//option[contains(., 'Programação')]'.</msg>
+<arg>//option[contains(., 'Programação')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-12T14:31:33.307405" elapsed="0.030067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-12T14:31:43.337675" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-12T14:31:33.337472" elapsed="10.000203"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:43.338683" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>id:form-botao</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-12T14:31:43.338683" elapsed="0.058635"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-12T14:31:43.416355" level="INFO">Element 'class:colaborador' is displayed.</msg>
+<arg>class:colaborador</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-12T14:31:43.397318" elapsed="0.019037"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-12T14:31:48.418484" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-12T14:31:43.417361" elapsed="5.001123"/>
+</kw>
+<status status="PASS" start="2025-05-12T14:31:32.989118" elapsed="15.429874"/>
+</test>
+<status status="PASS" start="2025-05-12T14:31:30.752265" elapsed="17.667733"/>
+</suite>
+<status status="PASS" start="2025-05-12T14:31:30.750268" elapsed="17.671732"/>
+</suite>
+<status status="PASS" start="2025-05-12T14:31:30.727727" elapsed="17.695270"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Organo" id="s1" pass="2" fail="0" skip="0">Organo</stat>
+<stat name="Tests" id="s1-s1" pass="2" fail="0" skip="0">Organo.Tests</stat>
+<stat name="Primeito Teste" id="s1-s1-s1" pass="2" fail="0" skip="0">Organo.Tests.Primeito Teste</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-12T14:31:31.119889" level="WARN">Imported library 'webdriver_manager' contains no keywords.</msg>
+</errors>
+</robot>
